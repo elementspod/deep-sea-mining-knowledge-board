@@ -1,5 +1,5 @@
 from,to,type,label,start_date,end_date,status,stake,source_url,confidence,last_verified,contributed_by,source_id
-st-nauru,nori,sponsors,Sponsorship under UNCLOS Art. 153,2011-07-22,,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
+st-nauru,nori,sponsors,Sponsorship under UNCLOS Art. 153,2011-07-22,,active,,https://isa.org.jm/exploration-contracts/polymetallic-nodules/,confirmed,,seed,src-isa-contractors
 st-tonga,toml,sponsors,Sponsorship under UNCLOS Art. 153,2012-01-11,,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
 st-kiribati,marawa,sponsors,Sponsorship under UNCLOS Art. 153,2015-01-19,,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
 st-belgium,gsr,sponsors,Sponsorship under UNCLOS Art. 153,2013-01-14,,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
@@ -16,7 +16,7 @@ st-france,ifremer,sponsors,Sponsorship under UNCLOS Art. 153,2001-06-20,,active,
 st-jamaica,bmj,sponsors,Sponsorship under UNCLOS Art. 153,2021-04-01,,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,reported,,seed,src-isa-contractors
 st-brazil,cprm,sponsors,Sponsorship under UNCLOS Art. 153,2015-11-09,,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
 st-russia,yuzhmor,sponsors,Sponsorship under UNCLOS Art. 153,2001-03-29,,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
-nori,ccz,holds-exploration-contract,Polymetallic nodules,2011-07-22,2026-07-21,extended,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
+nori,ccz,holds-exploration-contract,Polymetallic nodules,2011-07-22,2026-07-21,extended,,https://isa.org.jm/wp-content/uploads/2026/07/ISBA_31_C_36-Decision-of-the-Council-of-the-ISA-relating-to-an-application-for-extension-of-the-contract-for-exploration-for-PMN-with-NORI-fv-AUV.pdf,confirmed,,seed,src-isa-contractors
 toml,ccz,holds-exploration-contract,Polymetallic nodules,2012-01-11,2027-01-10,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
 marawa,ccz,holds-exploration-contract,Polymetallic nodules,2015-01-19,2030-01-18,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
 gsr,ccz,holds-exploration-contract,Polymetallic nodules,2013-01-14,2028-01-13,active,,https://www.isa.org.jm/deep-seabed-minerals-contractors,confirmed,,seed,src-isa-contractors
