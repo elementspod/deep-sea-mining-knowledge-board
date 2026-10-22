@@ -18,8 +18,8 @@ window.DSM_CONFIG = {
      If the sheet cannot be reached, the page falls back to the data/ folder and
      says so at the bottom of the screen, so a sheet outage never blanks the map. */
   sheetUrls: {
-    elements:    "",
-    connections: "",
+    elements:    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJOkMa-_EqC3YLkUkIpzXitPhywCQhZsDhZdle8Sq4RdfJH6kJsMcjzZmn_fivuYnAVB-bJOTqWEUn/pub?gid=0&single=true&output=csv",
+    connections: "https://docs.google.com/spreadsheets/d/e/2PACX-1vSJOkMa-_EqC3YLkUkIpzXitPhywCQhZsDhZdle8Sq4RdfJH6kJsMcjzZmn_fivuYnAVB-bJOTqWEUn/pub?gid=1713692417&single=true&output=csv",
     anchors:     ""
   },
 
