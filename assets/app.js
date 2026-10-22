@@ -143,7 +143,7 @@ const cy = cytoscape({
   container: document.getElementById("graph"),
   elements: {
     nodes: DATA.elements.map(function (e) {
-      return { data: { id: e.id, label: e.label, type: e.type, image: e.image, raw: e } };
+      return { data: { id: e.id, label: e.label, type: e.type, raw: e } };
     }),
     edges: DATA.connections.map(function (c, i) {
       return { data: {
