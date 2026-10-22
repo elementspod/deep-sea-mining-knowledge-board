@@ -156,13 +156,25 @@ const cy = cytoscape({
   },
   minZoom: 0.15, maxZoom: 3, wheelSensitivity: 0.08,
   style: [
-{ selector: "node[image]", style: {
-  "background-image": "data(image)",
-  "background-fit": "cover",
-  "background-clip": "node",
-  "border-width": 1.5,
-  "border-color": "#ffffff"
-}},
+    { selector: "node", style: {
+      "background-color": function (e) { return nodeColour(e.data("type")); },
+      "shape": function (e) { return SHAPE[e.data("type")] || "ellipse"; },
+      "label": "data(label)",
+      "font-family": "IBM Plex Sans, sans-serif",
+      "font-size": 8.5,
+      "color": function () { return css().getPropertyValue("--ink").trim(); },
+      "text-valign": "bottom", "text-margin-y": 3,
+      "text-max-width": 92, "text-wrap": "ellipsis",
+      "width": "mapData(deg, 0, 12, 10, 32)",
+      "height": "mapData(deg, 0, 12, 10, 32)",
+      "border-width": 0
+    }},
+    { selector: "node[image]", style: {
+      "background-image": "data(image)",
+      "background-fit": "cover",
+      "background-clip": "node",
+      "border-width": 1.5,
+      "border-color": "#ffffff"
     }},
     { selector: "edge", style: {
       "width": 1.2,
@@ -173,6 +185,7 @@ const cy = cytoscape({
       "target-arrow-shape": "triangle",
       "arrow-scale": 0.5
     }}
+  ].concat(patternSelectors).concat([
   ].concat(patternSelectors).concat([
     { selector: "node[?header]", style: {
       "background-opacity": 0,
