@@ -154,7 +154,7 @@ const cy = cytoscape({
       }};
     })
   },
-  minZoom: 0.15, maxZoom: 3,
+  minZoom: 0.15, maxZoom: 3, wheelSensitivity: 0.08,
   style: [
     { selector: "node", style: {
       "background-color": function (e) { return nodeColour(e.data("type")); },
