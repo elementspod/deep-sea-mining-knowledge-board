@@ -186,7 +186,6 @@ const cy = cytoscape({
       "arrow-scale": 0.5
     }}
   ].concat(patternSelectors).concat([
-  ].concat(patternSelectors).concat([
     { selector: "node[?header]", style: {
       "background-opacity": 0,
       "label": "data(label)",
