@@ -169,13 +169,6 @@ const cy = cytoscape({
       "height": "mapData(deg, 0, 12, 10, 32)",
       "border-width": 0
     }},
-    { selector: "node[image]", style: {
-      "background-image": "data(image)",
-      "background-fit": "cover",
-      "background-clip": "node",
-      "border-width": 1.5,
-      "border-color": "#ffffff"
-    }},
     { selector: "edge", style: {
       "width": 1.2,
       "line-color": function (e) { return famColour(e.data("fam")); },
