@@ -873,5 +873,36 @@ document.querySelectorAll('input[type="checkbox"][data-kind]').forEach(function 
     });
     box.hidden = false;
   }
+     // ---- Search ----
+  (function () {
+    var box = document.getElementById("search");
+    var msg = document.getElementById("search-msg");
+    var list = document.getElementById("search-list");
+    list.innerHTML = DATA.elements.map(function (e) {
+      return '<option value="' + esc(e.label) + '">';
+    }).join("");
+    function find(q) {
+      q = q.trim().toLowerCase();
+      if (!q) return null;
+      var real = cy.nodes().filter(function (n) { return !n.data("header") && !n.data("blob"); });
+      var exact = real.filter(function (n) { return String(n.data("label")).toLowerCase() === q; });
+      if (exact.length) return exact[0];
+      var part = real.filter(function (n) { return String(n.data("label")).toLowerCase().indexOf(q) !== -1; });
+      return part.length ? part[0] : null;
+    }
+    function go() {
+      var n = find(box.value);
+      if (!n) { msg.textContent = box.value.trim() ? "No match." : ""; return; }
+      if (!n.visible()) {
+        msg.textContent = n.data("label") + " is hidden by the current Emphasis or Entities filter. Set Emphasis to Everything.";
+        return;
+      }
+      msg.textContent = "";
+      cy.animate({ center: { eles: n }, zoom: Math.max(cy.zoom(), 1) }, { duration: 400 });
+      n.emit("tap");
+    }
+    box.addEventListener("change", go);
+    box.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
+  })();
   window.DSM_STARTED = true;
 })();
