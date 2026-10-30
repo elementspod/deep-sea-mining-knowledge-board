@@ -389,9 +389,11 @@ function columnsArrangement(pool, RS) {
     const list = countrySort(groups[k]);
     groups[k] = list;
     const x = parseInt(parts[0], 10) * COL_W;
-    const cy0 = rowY[parseInt(parts[1], 10)];
+       const cy0 = rowY[parseInt(parts[1], 10)];
+    const maxN = rowMax[parseInt(parts[1], 10)];
+    const step = list.length > 1 ? ((maxN - 1) * ROW_H) / (list.length - 1) : 0;
     list.forEach(function (n, i) {
-      pos[n.id()] = { x: x, y: cy0 + (i - (list.length - 1) / 2) * ROW_H };
+      pos[n.id()] = { x: x, y: cy0 + (i - (list.length - 1) / 2) * step };
     });
   });
 
