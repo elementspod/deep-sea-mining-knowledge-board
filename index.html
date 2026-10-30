@@ -23,6 +23,7 @@
 
 <div class="shell">
   <aside class="rail">
+        <button id="menu-close" class="menu-close" type="button">Show the map</button>
         <div class="group">
       <h2>Search</h2>
       <input id="search" type="search" list="search-list" placeholder="Find a company, country, organisation…" autocomplete="off">
@@ -97,6 +98,7 @@
     <div id="graph"></div>
     <div id="worldmap" hidden></div>
     <button id="map-toggle" class="map-toggle" type="button" aria-pressed="false">World map</button>
+        <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false">Menu</button>
     <div class="detail" id="detail" role="region" aria-label="Entity detail"></div>
   </section>
 </div>
@@ -110,6 +112,18 @@
 </footer>
 <noscript><p class="footnote">This page needs JavaScript to draw the map.</p></noscript>
 
+  <script>
+(function () {
+  var open = document.getElementById("menu-toggle");
+  var close = document.getElementById("menu-close");
+  function set(on) {
+    document.body.classList.toggle("menu-open", on);
+    open.setAttribute("aria-expanded", on ? "true" : "false");
+  }
+  open.addEventListener("click", function () { set(true); });
+  close.addEventListener("click", function () { set(false); });
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
 <script src="assets/config.js"></script>
 <script src="assets/data-loader.js"></script>
