@@ -923,6 +923,7 @@ document.querySelectorAll('input[type="checkbox"][data-kind]').forEach(function 
         return;
       }
       msg.textContent = "";
+      document.body.classList.remove("menu-open");
       cy.animate({ center: { eles: n }, zoom: Math.max(cy.zoom(), 1) }, { duration: 400 });
       n.emit("tap");
     }
