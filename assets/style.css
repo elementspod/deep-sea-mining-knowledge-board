@@ -286,3 +286,36 @@ select {
 }
 .detail .linkish { font: inherit; border: 0; background: none; padding: 0; color: var(--focus); cursor: pointer; text-decoration: underline; }
 @media (max-width: 860px) { .map-legend { max-width: 220px; font-size: 11px; } }
+/* Phone layout: map first, controls behind a Menu button */
+.menu-toggle, .menu-close { display: none; }
+
+@media (max-width: 860px) {
+  .masthead { padding: 12px 16px 10px; gap: 4px 16px; }
+  .masthead h1 { font-size: 20px; }
+  .masthead p { display: none; }
+  .readout { font-size: 12px; white-space: normal; }
+
+  .shell { display: block; height: auto; min-height: 0; }
+  .stage { height: calc(100vh - 120px); height: calc(100dvh - 120px); min-height: 360px; }
+
+  .menu-toggle {
+    display: block; position: absolute; left: 14px; top: 14px; z-index: 6;
+    font: inherit; font-size: 13px; font-weight: 600; padding: 6px 12px;
+    border: 1px solid var(--rule); border-radius: 3px; cursor: pointer;
+    background: var(--panel); color: var(--ink); box-shadow: var(--shadow);
+  }
+  .map-toggle { left: 84px; }
+
+  .rail {
+    display: none; position: fixed; inset: 0; z-index: 50;
+    max-height: none; border: 0; padding: 14px 20px 60px;
+  }
+  body.menu-open .rail { display: block; }
+  body.menu-open { overflow: hidden; }
+
+  .menu-close {
+    display: block; width: 100%; margin: 0 0 18px; padding: 11px 12px;
+    font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+    background: var(--focus); color: #fff; border: 0; border-radius: 3px;
+  }
+}
