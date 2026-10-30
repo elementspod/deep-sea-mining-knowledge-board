@@ -723,6 +723,7 @@ cy.on("tap", "node", function (evt) {
       esc(other.data("label")) +
       (when ? ' <span class="rel">' + esc(when) + '</span>' : '') +
       (c.status && c.status !== "active" ? ' <span class="rel">(' + esc(c.status) + ')</span>' : '') +
+             (c.source_url ? ' <a class="rel" href="' + esc(c.source_url) + '" target="_blank" rel="noopener">source</a>' : '') +
       '</li>';
   }).join("");
 
