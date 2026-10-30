@@ -740,6 +740,30 @@ cy.on("tap", "node", function (evt) {
   detail.classList.add("open");
   detail.querySelector(".close").addEventListener("click", closeDetail);
 });
+cy.on("tap", "edge", function (evt) {
+  const ed = evt.target, c = ed.data("raw");
+  const meta = EDGE_META[c.type] || { name: c.type, family: "structure" };
+  const a = ed.source(), b = ed.target();
+  cy.elements().removeClass("dim sel lit");
+  cy.elements().not(headers).not(blobs).addClass("dim");
+  ed.removeClass("dim").addClass("lit");
+  a.removeClass("dim").addClass("lit");
+  b.removeClass("dim").addClass("lit");
+  detail.innerHTML =
+    '<button class="close" aria-label="Close">×</button>' +
+    '<h3>' + esc(a.data("label")) + ' → ' + esc(b.data("label")) + '</h3>' +
+    '<p class="kind">' + esc(meta.name) + '</p>' +
+    (c.label ? '<p class="blurb">' + esc(c.label) + '</p>' : '') +
+    (c.start_date ? '<span class="flag">from ' + esc(c.start_date) + '</span>' : '') +
+    (c.end_date ? '<span class="flag">to ' + esc(c.end_date) + '</span>' : '') +
+    (c.status ? '<span class="flag">' + esc(c.status) + '</span>' : '') +
+    (c.stake ? '<span class="flag">stake: ' + esc(c.stake) + '</span>' : '') +
+    '<span class="flag">' + esc(c.confidence) + '</span>' +
+    (c.last_verified ? '<span class="flag">verified ' + esc(c.last_verified) + '</span>' : '') +
+    (c.source_url ? '<span class="flag"><a href="' + esc(c.source_url) + '" target="_blank" rel="noopener">source</a></span>' : '');
+  detail.classList.add("open");
+  detail.querySelector(".close").addEventListener("click", closeDetail);
+});
 cy.on("tap", function (evt) { if (evt.target === cy) closeDetail(); });
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () {
