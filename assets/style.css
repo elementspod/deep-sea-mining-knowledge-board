@@ -204,18 +204,18 @@ select {
    World map (assets/map.js)
    ------------------------------------------------------------------------- */
 :root {
-  --map-ocean: #DCE6EA; --map-land: #F3EFE4; --map-land-data: #E2D6BC;
-  --map-border: #B8AD95; --map-grid: #C8D5DB; --map-marker: #2A3B44; --map-halo: #F7F3EA;
+  --map-ocean: #0A2A2E; --map-land: #F5F5EC; --map-land-data: #D1E3DF;
+  --map-border: #A9C5C2; --map-grid: #C4D9D7; --map-marker: #0E4A52; --map-halo: #F5F5EC;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --map-ocean: #0B1D27; --map-land: #163040; --map-land-data: #24495B;
-    --map-border: #2D5163; --map-grid: #12303D; --map-marker: #E6DFCE; --map-halo: #07141C;
+    --map-ocean: #071F23; --map-land: #123B40; --map-land-data: #176B74;
+    --map-border: #28545A; --map-grid: #1C4146; --map-marker: #F0C020; --map-halo: #0A2A2E;
   }
 }
 :root[data-theme="dark"] {
-  --map-ocean: #0B1D27; --map-land: #163040; --map-land-data: #24495B;
-  --map-border: #2D5163; --map-grid: #12303D; --map-marker: #E6DFCE; --map-halo: #07141C;
+  --map-ocean: #071F23; --map-land: #123B40; --map-land-data: #176B74;
+  --map-border: #28545A; --map-grid: #1C4146; --map-marker: #F0C020; --map-halo: #0A2A2E;
 }
 
 .map-toggle {
