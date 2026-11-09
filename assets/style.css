@@ -10,27 +10,32 @@
   --ink-soft: #557477;
   --edge-strong: #176B74;
   --focus: #4FC1C7;
-  --t-company: #9C6A12;
-  --t-state: #2D6C57;
-  --t-body: #94391D;
-  --t-regulator: #B4552C;
-  --t-research-org: #2B5E8A;
-  --t-project: #63479A;
-  --t-ngo: #9E3654;
-  --t-area: #2A5468;
-  --t-exchange: #5D6862;
-  --t-instrument: #7A6733;
-  --t-source: #2E6A72;
-  --f-authorisation: #94391D;
-  --f-legal: #7A6733;
-  --f-ownership: #9C6A12;
-  --f-access: #1F6E62;
-  --f-cooperation: #63479A;
-  --f-knowledge: #2B5E8A;
-  --f-position: #9E3654;
-  --f-structure: #54636B;
-  --f-information: #2E6A72;
-  --tr-isa: #94391D; --tr-dshmra: #B4552C; --tr-eez: #2D6C57; --tr-none: #6B7680;
+  --t-company: #B07A16;
+  --t-state: #267C69;
+  --t-body: #A94B35;
+  --t-regulator: #C5683E;
+  --t-research-org: #3477A5;
+  --t-project: #7256A8;
+  --t-ngo: #B04D70;
+  --t-area: #286A80;
+  --t-exchange: #65756C;
+  --t-instrument: #8A743B;
+  --t-source: #277C83;
+/* Relationship family colors */
+--f-authorisation: #B6533D;
+--f-legal: #8A743B;
+--f-ownership: #B07A16;
+--f-access: #267C69;
+--f-cooperation: #7256A8;
+--f-knowledge: #3477A5;
+--f-position: #B04D70;
+--f-structure: #647780;
+--f-information: #277C83;
+/* Relationship regime colors */
+--tr-isa: #A94B35;
+--tr-dshmra: #C5683E;
+--tr-eez: #267C69;
+--tr-none: #7B8990;
   --shadow: 0 1px 2px rgba(27,42,51,.10), 0 8px 24px rgba(27,42,51,.08);
 }
 @media (prefers-color-scheme: dark) {
@@ -39,16 +44,35 @@
     --rule: #28545A; --rule-soft: #1C4146;
     --ink: #F5F5EC; --ink-soft: #A7C5C4;
     --edge-strong: #176B74; --focus: #4FC1C7;
-    --t-company: #D2A04A; --t-state: #6FA894; --t-body: #C1654B;
-    --t-regulator: #E09070; --t-research-org: #7BA7CE; --t-project: #A38ACB;
-    --t-ngo: #CF7D93; --t-area: #5E8DA4; --t-exchange: #A9B3AE;
-    --t-instrument: #BFAE85;
-    --t-source: #6FB3BC;
-    --f-authorisation: #C1654B; --f-legal: #BFAE85; --f-ownership: #D2A04A;
-    --f-access: #4FA795; --f-cooperation: #A38ACB; --f-knowledge: #7BA7CE;
-    --f-position: #CF7D93; --f-structure: #8CA3B0;
-    --f-information: #6FB3BC;
-    --tr-isa: #C1654B; --tr-dshmra: #E09070; --tr-eez: #6FA894; --tr-none: #7E8A93;
+/* Dark theme entity colors */
+--t-company: #F0C020;
+--t-state: #6FC5A7;
+--t-body: #E58B75;
+--t-regulator: #F09A76;
+--t-research-org: #80B9E0;
+--t-project: #B29BE0;
+--t-ngo: #E18BA8;
+--t-area: #70B6CD;
+--t-exchange: #AABAB0;
+--t-instrument: #D2B978;
+--t-source: #6FC1C5;
+
+/* Dark theme relationship colors */
+--f-authorisation: #E58B75;
+--f-legal: #D2B978;
+--f-ownership: #F0C020;
+--f-access: #6FC5A7;
+--f-cooperation: #B29BE0;
+--f-knowledge: #80B9E0;
+--f-position: #E18BA8;
+--f-structure: #AABAB0;
+--f-information: #6FC1C5;
+
+/* Dark theme relationship regimes */
+--tr-isa: #E58B75;
+--tr-dshmra: #F09A76;
+--tr-eez: #6FC5A7;
+--tr-none: #AAB4BA;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
   }
 }
@@ -57,16 +81,35 @@
   --rule: #28545A; --rule-soft: #1C4146;
   --ink: #F5F5EC; --ink-soft: #A7C5C4;
   --edge-strong: #176B74; --focus: #4FC1C7;
-  --t-company: #D2A04A; --t-state: #6FA894; --t-body: #C1654B;
-  --t-regulator: #E09070; --t-research-org: #7BA7CE; --t-project: #A38ACB;
-  --t-ngo: #CF7D93; --t-area: #5E8DA4; --t-exchange: #A9B3AE;
-  --t-instrument: #BFAE85;
-  --t-source: #6FB3BC;
-  --f-authorisation: #C1654B; --f-legal: #BFAE85; --f-ownership: #D2A04A;
-  --f-access: #4FA795; --f-cooperation: #A38ACB; --f-knowledge: #7BA7CE;
-  --f-position: #CF7D93; --f-structure: #8CA3B0;
-  --f-information: #6FB3BC;
-  --tr-isa: #C1654B; --tr-dshmra: #E09070; --tr-eez: #6FA894; --tr-none: #7E8A93;
+ /* Dark theme entity colors */
+--t-company: #F0C020;
+--t-state: #6FC5A7;
+--t-body: #E58B75;
+--t-regulator: #F09A76;
+--t-research-org: #80B9E0;
+--t-project: #B29BE0;
+--t-ngo: #E18BA8;
+--t-area: #70B6CD;
+--t-exchange: #AABAB0;
+--t-instrument: #D2B978;
+--t-source: #6FC1C5;
+
+/* Dark theme relationship colors */
+--f-authorisation: #E58B75;
+--f-legal: #D2B978;
+--f-ownership: #F0C020;
+--f-access: #6FC5A7;
+--f-cooperation: #B29BE0;
+--f-knowledge: #80B9E0;
+--f-position: #E18BA8;
+--f-structure: #AABAB0;
+--f-information: #6FC1C5;
+
+/* Dark theme relationship regimes */
+--tr-isa: #E58B75;
+--tr-dshmra: #F09A76;
+--tr-eez: #6FC5A7;
+--tr-none: #AAB4BA;
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 32px rgba(0,0,0,.35);
 }
 
