@@ -1,15 +1,15 @@
 /* Deep-Sea Mining Knowledge Board. Colours are tokens on :root; the dark theme
    redefines them, so change a colour there and everything follows. */
 :root {
-  --field: #E9E2D2;
-  --field-deep: #DED5C1;
-  --panel: #F3EEE2;
-  --rule: #C3B8A0;
-  --rule-soft: #D6CDB8;
-  --ink: #1B2A33;
-  --ink-soft: #5A6B75;
-  --edge-strong: #47606E;
-  --focus: #1B6F8C;
+  --field: #F5F5EC;
+  --field-deep: #E5ECE9;
+  --panel: #FFFFFF;
+  --rule: #C5D5D3;
+  --rule-soft: #DFE8E5;
+  --ink: #0A2A2E;
+  --ink-soft: #557477;
+  --edge-strong: #176B74;
+  --focus: #4FC1C7;
   --t-company: #9C6A12;
   --t-state: #2D6C57;
   --t-body: #94391D;
@@ -35,10 +35,10 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --field: #07141C; --field-deep: #030B11; --panel: #0E2331;
-    --rule: #1E4055; --rule-soft: #16323F;
-    --ink: #E4DDCC; --ink-soft: #8CA3B0;
-    --edge-strong: #7FA0B2; --focus: #5FC2E0;
+    --field: #0A2A2E; --field-deep: #071F23; --panel: #123B40;
+    --rule: #28545A; --rule-soft: #1C4146;
+    --ink: #F5F5EC; --ink-soft: #A7C5C4;
+    --edge-strong: #176B74; --focus: #4FC1C7;
     --t-company: #D2A04A; --t-state: #6FA894; --t-body: #C1654B;
     --t-regulator: #E09070; --t-research-org: #7BA7CE; --t-project: #A38ACB;
     --t-ngo: #CF7D93; --t-area: #5E8DA4; --t-exchange: #A9B3AE;
@@ -53,10 +53,10 @@
   }
 }
 :root[data-theme="dark"] {
-  --field: #07141C; --field-deep: #030B11; --panel: #0E2331;
-  --rule: #1E4055; --rule-soft: #16323F;
-  --ink: #E4DDCC; --ink-soft: #8CA3B0;
-  --edge-strong: #7FA0B2; --focus: #5FC2E0;
+  --field: #0A2A2E; --field-deep: #071F23; --panel: #123B40;
+  --rule: #28545A; --rule-soft: #1C4146;
+  --ink: #F5F5EC; --ink-soft: #A7C5C4;
+  --edge-strong: #176B74; --focus: #4FC1C7;
   --t-company: #D2A04A; --t-state: #6FA894; --t-body: #C1654B;
   --t-regulator: #E09070; --t-research-org: #7BA7CE; --t-project: #A38ACB;
   --t-ngo: #CF7D93; --t-area: #5E8DA4; --t-exchange: #A9B3AE;
