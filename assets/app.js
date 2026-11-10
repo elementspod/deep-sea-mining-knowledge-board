@@ -941,7 +941,6 @@ document.querySelectorAll('input[type="checkbox"][data-kind]').forEach(function 
   cy.on("zoom", sizeHeaders);
   sizeHeaders();
   // ---- Flags ----
-     window.dsmCy = cy;
   (function () {
     var FLAG = {
       "st-nauru": "nr", "st-tonga": "to", "st-kiribati": "ki", "st-belgium": "be",
