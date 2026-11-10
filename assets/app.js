@@ -161,10 +161,10 @@ const cy = cytoscape({
       "shape": function (e) { return SHAPE[e.data("type")] || "ellipse"; },
       "label": "data(label)",
       "font-family": "IBM Plex Sans, sans-serif",
-      "font-size": 8.5,
+      "font-size": 11,
       "color": function () { return css().getPropertyValue("--ink").trim(); },
       "text-valign": "bottom", "text-margin-y": 3,
-      "text-max-width": 92, "text-wrap": "ellipsis",
+      "text-max-width": 120, "text-wrap": "ellipsis",
       "width": "mapData(deg, 0, 12, 10, 32)",
       "height": "mapData(deg, 0, 12, 10, 32)",
       "border-width": 0
@@ -199,7 +199,7 @@ const cy = cytoscape({
       "width": "data(d)", "height": "data(d)"
     }},
     { selector: "node.packed", style: {
-      "font-size": 7.5, "text-valign": "center", "text-halign": "right",
+      "font-size": 9.5, "text-valign": "center", "text-halign": "right",
       "text-margin-x": 4, "text-max-width": 96, "z-index": 10,
       "text-background-color": function () { return css().getPropertyValue("--field").trim(); },
       "text-background-opacity": 0.72, "text-background-padding": 1.5
@@ -930,5 +930,15 @@ document.querySelectorAll('input[type="checkbox"][data-kind]').forEach(function 
     box.addEventListener("change", go);
     box.addEventListener("keydown", function (e) { if (e.key === "Enter") go(); });
   })();
+     // ---- Column headings stay readable when zooming out ----
+  function sizeHeaders() {
+    var z = cy.zoom();
+    headers.style({
+      "font-size": Math.min(Math.max(13, 15 / z), 32),
+      "text-max-width": Math.min(Math.max(150, 150 / z), 215)
+    });
+  }
+  cy.on("zoom", sizeHeaders);
+  sizeHeaders();
   window.DSM_STARTED = true;
 })();
