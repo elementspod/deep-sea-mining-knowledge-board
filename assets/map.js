@@ -34,7 +34,7 @@
     });
   }
   function tok(name, fallback) {
-    var v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    var v = getComputedStyle(document.getElementById("worldmap") || document.documentElement).getPropertyValue(name).trim();
     return v || fallback;
   }
   function loadScript(src) {
