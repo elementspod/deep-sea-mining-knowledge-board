@@ -572,3 +572,45 @@ select {
   }
 
 }
+/* ===== Colour swap: graph on green, world map on white ===== */
+
+/* Graph view: green background (text is light because the page uses the dark palette) */
+.stage {
+  background: linear-gradient(145deg, #0A2A2E 0%, #0E4A52 100%);
+}
+
+/* World map: white background, dark text */
+#worldmap {
+  background: #FFFFFF;
+  --map-ocean: #FFFFFF;
+  --map-land: #E3ECEA;
+  --map-land-data: #BCDAD6;
+  --map-border: #9DBDB9;
+  --map-grid: #E6EFED;
+  --map-marker: #0E4A52;
+  --map-halo: #FFFFFF;
+  --ink: #0A2A2E;
+  --ink-soft: #557477;
+  --panel: #FFFFFF;
+  --rule: #C5D5D3;
+  --focus: #176B74;
+  --t-body: #A94B35;
+  --tr-isa: #A94B35;
+  --tr-dshmra: #C5683E;
+  --tr-eez: #267C69;
+  --tr-none: #7B8990;
+}
+
+/* Buttons: light text on the dark buttons */
+.map-toggle, .menu-toggle {
+  color: #F5F5EC;
+  border-color: #4FC1C7;
+}
+.map-toggle:hover {
+  background: #176B74;
+  color: #F5F5EC;
+}
+
+/* Click-info panel: now dark, so the text and links need to be light */
+.detail h3 { color: #F5F5EC; }
+.detail a { color: #4FC1C7; }
