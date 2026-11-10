@@ -940,5 +940,32 @@ document.querySelectorAll('input[type="checkbox"][data-kind]').forEach(function 
   }
   cy.on("zoom", sizeHeaders);
   sizeHeaders();
+  // ---- Flags ----
+  (function () {
+    var FLAG = {
+      "st-nauru": "nr", "st-tonga": "to", "st-kiribati": "ki", "st-belgium": "be",
+      "st-uk": "gb", "st-singapore": "sg", "st-cook-islands": "ck", "st-china": "cn",
+      "st-japan": "jp", "st-germany": "de", "st-france": "fr", "st-jamaica": "jm",
+      "st-brazil": "br", "st-norway": "no", "st-png": "pg", "st-canada": "ca",
+      "st-usa": "us", "st-netherlands": "nl", "st-switzerland": "ch", "st-russia": "ru",
+      "st-new-zealand": "nz", "st-french-polynesia": "pf", "govt-india": "in",
+      "govt-korea": "kr", "govt-poland": "pl", "govt-russia": "ru", "minprirody": "ru"
+    };
+    cy.style().selector("node[image]").style({
+      "background-image": "data(image)",
+      "background-fit": "cover",
+      "background-clip": "node",
+      "border-width": 1,
+      "border-color": "#F5F5EC",
+      "width": "mapData(deg, 0, 12, 18, 34)",
+      "height": "mapData(deg, 0, 12, 18, 34)"
+    }).update();
+    cy.nodes().forEach(function (n) {
+      var raw = n.data("raw") || {};
+      var url = raw.image;
+      if (!url && FLAG[n.id()]) url = "https://flagcdn.com/w80/" + FLAG[n.id()] + ".png";
+      if (url) n.data("image", url);
+    });
+  })();
   window.DSM_STARTED = true;
 })();
