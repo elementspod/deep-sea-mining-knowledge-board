@@ -257,8 +257,8 @@ select {
   }
 }
 :root[data-theme="dark"] {
-  --map-ocean: #071F23; --map-land: #123B40; --map-land-data: #176B74;
-  --map-border: #28545A; --map-grid: #1C4146; --map-marker: #F0C020; --map-halo: #0A2A2E;
+  --map-ocean: #FFFFFF; --map-land: #E3ECEA; --map-land-data: #BCDAD6;
+  --map-border: #9DBDB9; --map-grid: #E6EFED; --map-marker: #0E4A52; --map-halo: #FFFFFF;
 }
 
 .map-toggle {
@@ -271,11 +271,11 @@ select {
 .map-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .detail { z-index: 5; }
 
-#worldmap { position: absolute; inset: 0; overflow: hidden; background: var(--field); }
+#worldmap { position: absolute; inset: 0; overflow: hidden; background: #FFFFFF; --tr-isa: #A94B35; --tr-dshmra: #C5683E; --tr-eez: #267C69; --tr-none: #7B8990; }
 #worldmap[hidden] { display: none; }
 #worldmap svg { width: 100%; height: 100%; display: block; cursor: grab; }
 #worldmap svg:active { cursor: grabbing; }
-.map-msg { margin: 60px auto; text-align: center; color: var(--ink-soft); }
+.map-msg { margin: 60px auto; text-align: center; color: #557477; }
 
 .map-ocean { fill: var(--map-ocean); }
 .map-grid { fill: none; stroke: var(--map-grid); stroke-width: 0.5; vector-effect: non-scaling-stroke; }
@@ -294,7 +294,7 @@ select {
 .map-mk:focus-visible { outline: none; }
 .map-mk:focus-visible circle, .map-mk:focus-visible rect { stroke: var(--focus); stroke-width: 3; }
 .map-label {
-  font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 10.5px; fill: var(--ink);
+  font-family: "IBM Plex Sans", system-ui, sans-serif; font-size: 10.5px; fill: #0A2A2E;
   paint-order: stroke; stroke: var(--map-halo); stroke-width: 3px; stroke-linejoin: round; pointer-events: none;
 }
 .map-mk.area .map-label { font-style: italic; }
@@ -509,14 +509,15 @@ select {
 }
 
 /* Map toggle */
-.map-toggle {
-  border-color: #176B74;
-  color: #0A2A2E;
+.map-toggle, .menu-toggle {
+  border-color: #4FC1C7;
+  color: #F5F5EC;
 }
 
 .map-toggle:hover {
   border-color: #4FC1C7;
-  background: #F5F5EC;
+  background: #176B74;
+  color: #F5F5EC;
 }
 
 /* Selected entity details */
@@ -526,21 +527,21 @@ select {
 
 /* Links */
 .detail a {
-  color: #176B74;
+  color: #4FC1C7;
 }
 /* Subtle ocean atmosphere */
 
 .stage {
   background: linear-gradient(
     145deg,
-    #F5F5EC 0%,
-    #E5ECE9 100%
+    #0A2A2E 0%,
+    #0E4A52 100%
   );
 }
 
 /* Detail panel accent */
 .detail h3 {
-  color: #0A2A2E;
+  color: #F5F5EC;
 }
 
 /* Gold emphasis */
@@ -572,45 +573,4 @@ select {
   }
 
 }
-/* ===== Colour swap: graph on green, world map on white ===== */
 
-/* Graph view: green background (text is light because the page uses the dark palette) */
-.stage {
-  background: linear-gradient(145deg, #0A2A2E 0%, #0E4A52 100%);
-}
-
-/* World map: white background, dark text */
-#worldmap {
-  background: #FFFFFF;
-  --map-ocean: #FFFFFF;
-  --map-land: #E3ECEA;
-  --map-land-data: #BCDAD6;
-  --map-border: #9DBDB9;
-  --map-grid: #E6EFED;
-  --map-marker: #0E4A52;
-  --map-halo: #FFFFFF;
-  --ink: #0A2A2E;
-  --ink-soft: #557477;
-  --panel: #FFFFFF;
-  --rule: #C5D5D3;
-  --focus: #176B74;
-  --t-body: #A94B35;
-  --tr-isa: #A94B35;
-  --tr-dshmra: #C5683E;
-  --tr-eez: #267C69;
-  --tr-none: #7B8990;
-}
-
-/* Buttons: light text on the dark buttons */
-.map-toggle, .menu-toggle {
-  color: #F5F5EC;
-  border-color: #4FC1C7;
-}
-.map-toggle:hover {
-  background: #176B74;
-  color: #F5F5EC;
-}
-
-/* Click-info panel: now dark, so the text and links need to be light */
-.detail h3 { color: #F5F5EC; }
-.detail a { color: #4FC1C7; }
