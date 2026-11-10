@@ -941,6 +941,7 @@ document.querySelectorAll('input[type="checkbox"][data-kind]').forEach(function 
   cy.on("zoom", sizeHeaders);
   sizeHeaders();
   // ---- Flags ----
+     window.dsmCy = cy;
   (function () {
     var FLAG = {
       "st-nauru": "nr", "st-tonga": "to", "st-kiribati": "ki", "st-belgium": "be",
@@ -957,6 +958,7 @@ document.querySelectorAll('input[type="checkbox"][data-kind]').forEach(function 
       "background-clip": "node",
       "border-width": 1,
       "border-color": "#F5F5EC",
+      "background-image-crossorigin": "null",
       "width": "mapData(deg, 0, 12, 18, 34)",
       "height": "mapData(deg, 0, 12, 18, 34)"
     }).update();
